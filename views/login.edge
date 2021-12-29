@@ -1,0 +1,58 @@
+@layout('layouts.app')
+
+@section('content')
+<!-- Page Header -->
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Login</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <form action="/users/login" method="POST" encType="multipart/form-data">
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" class="form-control">
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+        </div>
+      
+        <div class="form-group my-4 text-center">
+          <button class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <aside>
+  <div class="widget">
+     
+    <ul class="widget-category-list">
+      <li>
+<img src="https://pbs.twimg.com/media/Dho6YVaXUAAzVBp.jpg"></li>
+<p align="center"> <c>New Ice Cream </c></p>
+    </ul>
+    <ul class="widget-category-list">
+      <li>
+<img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/a6bcf943-65fe-4fc8-b0cf-e3a5c90e735f/600x900"></li>
+<p align="center"><c> Watch new Series for free!</c> </p>
+    </ul>
+ </div>
+
+</aside>
+</div>
+@endsection

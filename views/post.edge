@@ -1,0 +1,59 @@
+@layout('layouts.app')
+
+@section('content')
+
+      <div class="container">
+          <div class="posts-list">
+        <div class="post">
+            <div class="post-content">
+                <div class="widget">
+                <span class="post-title">{{post.title}}</span>
+                <div class="post-footer">{{post.content}}
+            </div>
+                <span class="meta">Posted by
+                    <a href="#">{{ post.username }}</a>
+                    on {{ post.createdAt.toDateString() }}
+                  </span>
+    </div>
+    </div>
+</div>
+</div>
+        <aside>
+            
+            <div class="widget">
+             
+               <ul class="widget-category-list">
+                 <li>
+   <img src="https://pbs.twimg.com/media/Dho6YVaXUAAzVBp.jpg"></li>
+   <p align="center"> <c>New Ice Cream </c></p>
+               </ul>
+               <ul class="widget-category-list">
+                 <li>
+   <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/a6bcf943-65fe-4fc8-b0cf-e3a5c90e735f/600x900"></li>
+   <p align="center"><c> Watch new Series for free!</c> </p>
+               </ul>
+            </div>
+            <div class="widget">
+               <h3 class="widget-title">Похожие пользователи</h3>
+               <ul class="widget-posts-list">
+                  <li>
+                     <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1339417037471399937/-K4yXEWD.jpg"></a></div>
+                     <h4 class="widget-post-title"><a href="">XIAO_GENS#</a></h4>
+                  </li>
+                  <li>
+                     <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1333408276055285761/3_dnSlCF_400x400.jpg"></a></div>
+                     <h4 class="widget-post-title"><a href="">SEROVOLK</a></h4>
+                  </li>
+                  <li>
+                     <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1072153829611921413/pQ8gic56_400x400.jpg"></a></div>
+                     <h4 class="widget-post-title"><a href="">Ovsyan_ph</a></h4>
+                  </li>
+               </ul>
+            </div>
+         </aside>
+    <hr>
+        </div>
+@endsection 
+
+
+ 

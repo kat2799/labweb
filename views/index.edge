@@ -1,0 +1,67 @@
+@layout('layouts.app')
+
+@section('content')
+
+
+<!-- Main Content -->
+<div class="container">
+  <div class="posts-list">
+   
+      @each(post in posts)
+        <div class="post-preview">
+          <a href="/post/{{ post._id }}">
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">{{ post.username }}</a>
+            on {{ post.createdAt.toDateString() }}
+          </p>
+        </div>
+        <hr>
+      @endeach
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts →</a>
+      </div>
+    </div>
+  
+  <aside>
+            
+    <div class="widget">
+     
+       <ul class="widget-category-list">
+         <li>
+<img src="https://pbs.twimg.com/media/Dho6YVaXUAAzVBp.jpg"></li>
+<p align="center"> <c>New Ice Cream </c></p>
+       </ul>
+       <ul class="widget-category-list">
+         <li>
+<img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/a6bcf943-65fe-4fc8-b0cf-e3a5c90e735f/600x900"></li>
+<p align="center"><c> Watch new Series for free!</c> </p>
+       </ul>
+    </div>
+    <div class="widget">
+       <h3 class="widget-title">Похожие пользователи</h3>
+       <ul class="widget-posts-list">
+          <li>
+             <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1339417037471399937/-K4yXEWD.jpg"></a></div>
+             <h4 class="widget-post-title"><a href="">XIAO_GENS#</a></h4>
+          </li>
+          <li>
+             <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1333408276055285761/3_dnSlCF_400x400.jpg"></a></div>
+             <h4 class="widget-post-title"><a href="">SEROVOLK</a></h4>
+          </li>
+          <li>
+             <div class="post-image-small"><a href=""><img src="https://pbs.twimg.com/profile_images/1072153829611921413/pQ8gic56_400x400.jpg"></a></div>
+             <h4 class="widget-post-title"><a href="">Ovsyan_ph</a></h4>
+          </li>
+       </ul>
+    </div>
+ </aside>
+</div>
+
+<hr>
+@endsection 
+ 
